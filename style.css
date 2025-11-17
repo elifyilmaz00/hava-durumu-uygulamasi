@@ -1,0 +1,67 @@
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app{
+    width:400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden; /* kenarları yuvarlak tutmak için*/
+
+}
+
+.header{
+    padding: 20px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+#sehir-input{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#getir-btn{
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content{
+    padding: 30px;
+    text-align: center;
+}
+
+.mesaj{
+    color: #888;
+}
+
+#sehir-adi{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#sicaklik{
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+#durum{
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+
