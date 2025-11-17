@@ -36,7 +36,24 @@ async function getWeatherData(sehir) {
     } catch (error) {
 
         // 6. Herhangi bir hata olursa, kullanıcıya hata mesajı göster
-        
+
         weatherContainer.innerHTML = `<p class="mesaj" style="color: red;">Hata: ${error.message}</p>`;
     }
+}
+
+function updateUI(data){
+
+const {name, main, weather} = data; //Gelen veriden ihtiyacımız olanları Destructuring ile alalım.
+
+const iconCode = weather[0].icon;
+const iconUrl= `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+weatherContainer.innerHTML= `
+
+<h2 id="sehir-adi">${name}</h2>
+<div id="sicaklik">${Math.round(main.temp)}°C</div>
+<img src="${iconUrl}" alt="${weather[0].description}">
+<p id="durum">${weather[0].description}</p> 
+`;
+
 }
