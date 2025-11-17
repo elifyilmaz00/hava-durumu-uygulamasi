@@ -57,3 +57,27 @@ weatherContainer.innerHTML= `
 `;
 
 }
+
+//Olay dinleyici ekle
+
+getirBtn.addEventListener("click", () => {
+
+    const sehir = sehirInput.ariaValueMax.trim();
+    if(sehir){
+        getWeatherData(sehir);
+    }
+
+    else{
+        alert("Lütfen bir şehir adı girin.");
+    }
+});
+
+//Enter tuşuna basıldığında arama yapma
+
+sehirInput.addEventListener("keydown", (e) => {
+    if(e.key==="Enter"){
+        getirBtn.click(); //Butonun click olayını programatik olarak tetikle
+
+    }
+});
+
