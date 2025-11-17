@@ -60,24 +60,19 @@ weatherContainer.innerHTML= `
 
 //Olay dinleyici ekle
 
-getirBtn.addEventListener("click", () => {
-
-    const sehir = sehirInput.ariaValueMax.trim();
-    if(sehir){
+getirBtn.addEventListener('click', () => {
+    const sehir = sehirInput.value.trim();
+    if (sehir) {
         getWeatherData(sehir);
-    }
-
-    else{
+    } else {
         alert("Lütfen bir şehir adı girin.");
     }
 });
 
-//Enter tuşuna basıldığında arama yapma
-
-sehirInput.addEventListener("keydown", (e) => {
-    if(e.key==="Enter"){
-        getirBtn.click(); //Butonun click olayını programatik olarak tetikle
-
+// Bonus: Enter tuşuna da basalım
+sehirInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        getirBtn.click(); // Butonun click olayını programatik olarak tetikle
     }
 });
 
